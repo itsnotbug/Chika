@@ -36,7 +36,7 @@ class SignIn : AppCompatActivity() {
        mAuth.signInWithEmailAndPassword(email,password)
            .addOnCompleteListener {task->
                if(task.isSuccessful){
-                val intent = Intent(this@SignIn,MainActivity::class.java)
+                   val intent = Intent(this@SignIn,MainActivity::class.java)
                    startActivity(intent)
                }else{
                    Toast.makeText(this@SignIn,"User does not exist",Toast.LENGTH_SHORT).show()
