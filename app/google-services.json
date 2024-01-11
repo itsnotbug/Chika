@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "532211301127",
+    "project_id": "chika-44c75",
+    "storage_bucket": "chika-44c75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532211301127:android:af59d65b8580cadd1463a2",
+        "android_client_info": {
+          "package_name": "com.example.chika"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMrdpmKXUDua87zL20nmtipXBav4Gc5cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Chika</string>
+    <string name="sign_in">Log In</string>
+    <string name="sign_up">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+</resources>
