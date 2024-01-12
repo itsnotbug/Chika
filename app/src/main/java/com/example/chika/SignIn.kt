@@ -27,7 +27,6 @@ class SignIn : AppCompatActivity() {
         }
         binding.btnInRegister.setOnClickListener{
             val intent = Intent(this@SignIn,SignUp::class.java)
-            finish()
             startActivity(intent)
         }
 
