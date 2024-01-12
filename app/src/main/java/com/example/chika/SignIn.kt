@@ -22,11 +22,12 @@ class SignIn : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             val email = binding.edEmail.text.toString()
             val password = binding.edPassword.text.toString()
-
             login(email,password)
+
         }
         binding.btnInRegister.setOnClickListener{
             val intent = Intent(this@SignIn,SignUp::class.java)
+            finish()
             startActivity(intent)
         }
 

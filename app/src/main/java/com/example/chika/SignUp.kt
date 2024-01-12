@@ -9,6 +9,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
+
 class SignUp : AppCompatActivity() {
     private lateinit var binding: ActivitySignupBinding
     private lateinit var mAuth:FirebaseAuth
@@ -37,7 +38,8 @@ class SignUp : AppCompatActivity() {
                      //add user to real time database
                      addUserToDatabase(name,email,mAuth.uid!!)
                      //proceed to the  sign in
-                   val intent = Intent(this@SignUp,SignIn::class.java)
+                    val intent = Intent(this@SignUp,SignIn::class.java)
+                     finish()
                     startActivity(intent)
                 }else{
                    Toast.makeText(this,"Some error occurred",Toast.LENGTH_SHORT).show()
@@ -45,8 +47,12 @@ class SignUp : AppCompatActivity() {
             }
     }
 
+    //Function to add user into real time database
     private fun addUserToDatabase(name: String, email: String, uid: String) {
         mDbref = FirebaseDatabase.getInstance().reference
         mDbref.child("user").child(uid).setValue(User(name,email,uid))
+            .addOnSuccessListener {
+                Toast.makeText(this,"Successfully registered!",Toast.LENGTH_SHORT).show()
+            }
     }
 }
