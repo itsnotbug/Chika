@@ -28,7 +28,7 @@ class UserAdapter(private val context:Context, private val userList:MutableList<
             val intent =Intent(context,Chat::class.java)
             intent.putExtra("name",currentUser.name)
             intent.putExtra("uid",currentUser.uid)
-            context.startActivity(intent)
+             context.startActivity(intent)
         }
     }
     class UserViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
