@@ -1,6 +1,7 @@
 package com.example.chika
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,6 +22,14 @@ class UserAdapter(private val context:Context, private val userList:MutableList<
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
          val currentUser = userList[position]
         holder.textName.text = currentUser.name
+
+        //when user is selected/tapped
+        holder.itemView.setOnClickListener {
+            val intent =Intent(context,Chat::class.java)
+            intent.putExtra("name",currentUser.name)
+            intent.putExtra("uid",currentUser.uid)
+            context.startActivity(intent)
+        }
     }
     class UserViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         val textName = itemView.findViewById<TextView>(R.id.txtUserName)!!

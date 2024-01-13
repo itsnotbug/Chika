@@ -2,7 +2,7 @@ package com.example.chika
 
 class User {
     var name: String?= null
-    var email:String?= null
+    private var email:String?= null
     var uid:String?=null
 
     constructor(){}
