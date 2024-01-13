@@ -61,11 +61,12 @@ class Chat : AppCompatActivity() {
             val messageObject = Message(message,senderUid)
             mDbReference.child("chats").child(senderRoom!!).child("messages").push()
                 .setValue(messageObject).addOnSuccessListener {
-                    mDbReference.child("chats").child(receiverRoom!!).child("messages")
+                    mDbReference.child("chats").child(receiverRoom!!).child("messages").push()
                         .setValue(messageObject)
                 }
+            binding.edTxtMessage.setText("")
         }
-        binding.edTxtMessage.setText("")
+
 
     }
 }
