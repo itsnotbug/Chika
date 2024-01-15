@@ -2,8 +2,13 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Chika" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/primary_blue_700</item>
+        <item name="colorPrimaryDark">@color/primary_blue_800</item>
+        <item name="colorAccent">@color/secondary_orange_500</item>
+        <item name="android:background">@color/primary_beige</item>
     </style>
-
+    <style name="GreenText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#00FF00</item>
+    </style>
     <style name="Theme.Chika" parent="Base.Theme.Chika" />
 </resources>

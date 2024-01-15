@@ -4,11 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFBE6"
     android:orientation="vertical"
     tools:context=".SignIn">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lAChickenIcon"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        app:lottie_rawRes="@raw/chicky"
+        app:lottie_repeatCount="1000"
+        app:lottie_repeatMode="reverse"
+        tools:ignore="MissingClass"
+        android:background="#FFFBE6"/>
+
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginTop="200dp"
         android:id="@+id/layoutEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,8 +72,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:textSize="15sp"
-        android:layout_marginEnd="10dp"
-        />
+        android:layout_marginEnd="10dp" />
 
     <Button
         android:id="@+id/btnInRegister"

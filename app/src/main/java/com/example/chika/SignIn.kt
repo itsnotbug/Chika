@@ -18,11 +18,20 @@ class SignIn : AppCompatActivity() {
         setContentView(binding.root)
         mAuth = FirebaseAuth.getInstance()
 
-        supportActionBar?.hide()
+        //lottie binding and animation
+        binding.lAChickenIcon.playAnimation()
+
         binding.btnLogin.setOnClickListener {
             val email = binding.edEmail.text.toString()
             val password = binding.edPassword.text.toString()
-            login(email,password)
+            if(email.isEmpty() || password.isEmpty())
+            {
+                Toast.makeText(this@SignIn,"Fields are empty",Toast.LENGTH_SHORT).show()
+            }else{
+                //direct checking from firebase and login-in
+                login(email,password)
+            }
+
 
         }
         binding.btnInRegister.setOnClickListener{

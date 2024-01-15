@@ -5,4 +5,10 @@
     <color name="gray">#949494</color>
     <color name="m_green">#37D05F</color>
     <color name="m_blue">#2D9AFC</color>
+    <!--Theme colors!-->
+    <color name="secondary_orange_500">#F9AA33</color>
+    <color name="primary_blue_700">#344955</color>
+    <color name="primary_blue_800">#232F34</color>
+    <color name="primary_blue_600">#4A6572</color>
+    <color name="primary_beige">#FFFBE6</color>
 </resources>

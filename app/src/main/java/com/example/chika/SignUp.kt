@@ -26,7 +26,14 @@ class SignUp : AppCompatActivity() {
             val name = binding.edTxtUsername.text.toString()
             val email = binding.edTxtEmail.text.toString()
             val password = binding.edTxtPassword.text.toString()
-            signUp(name,email,password)
+
+            if(name.isEmpty() || email.isEmpty() || password.isEmpty()){
+                Toast.makeText(this@SignUp,"Fields are empty",Toast.LENGTH_SHORT).show()
+            }
+            else{
+                signUp(name,email,password)
+            }
+
         }
 
     }
