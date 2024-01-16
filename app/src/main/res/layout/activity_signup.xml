@@ -1,62 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SignUp">
-
-    <EditText
-        android:id="@+id/edTxtEmail"
-        android:layout_width="371dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/email"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:paddingStart="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/edTxtUsername"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edTxtUsername"
-        app:layout_constraintTop_toBottomOf="@+id/edTxtUsername" />
-
-    <EditText
-        android:id="@+id/edTxtPassword"
-        android:layout_width="371dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:paddingStart="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/edTxtEmail"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edTxtEmail"
-        app:layout_constraintTop_toBottomOf="@+id/edTxtEmail" />
-
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="391dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/sign_up"
-        app:layout_constraintEnd_toEndOf="@+id/edTxtPassword"
-        app:layout_constraintStart_toStartOf="@+id/edTxtPassword"
-        app:layout_constraintTop_toBottomOf="@+id/edTxtPassword" />
-
     <EditText
         android:id="@+id/edTxtUsername"
         android:layout_width="371dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="164dp"
+        android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
+        android:drawableLeft="@drawable/baseline_verified_user_24"
+        android:drawablePadding="10dp"
         android:hint="@string/username"
         android:inputType="text"
-        android:paddingStart="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:paddingStart="10dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/edTxtEmail"
+        android:layout_width="371dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:drawableLeft="@drawable/baseline_email_24"
+        android:drawablePadding="10dp"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:paddingStart="10dp" />
+
+    <EditText
+        android:id="@+id/edTxtPassword"
+        android:layout_width="371dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:drawableLeft="@drawable/baseline_lock_24"
+        android:hint="@string/password"
+        android:drawablePadding="10dp"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingStart="10dp" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="15sp"
+        style="@style/Widget.MaterialComponents.Button"/>
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginEnd="20dp"
+        android:textSize="15sp"
+        style="@style/Widget.MaterialComponents.Button"/>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
