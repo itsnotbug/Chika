@@ -25,9 +25,10 @@
         android:id="@+id/layoutEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
         android:hint="@string/email">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -41,9 +42,10 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
         android:id="@+id/layoutPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,23 +67,29 @@
 
     <Button
         android:id="@+id/btnLogin"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
         android:text="@string/sign_in"
-        style="@style/Widget.MaterialComponents.Button"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:textSize="15sp"
-        android:layout_marginEnd="10dp" />
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/btnInRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sign_up"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
         android:textSize="15sp"
         style="@style/Widget.MaterialComponents.Button"/>
 

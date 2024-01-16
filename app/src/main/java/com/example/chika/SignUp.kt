@@ -19,9 +19,12 @@ class SignUp : AppCompatActivity() {
         binding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.hide()
         mAuth = FirebaseAuth.getInstance()
-
+        binding.btnLogin.setOnClickListener{
+            val intent =Intent(this@SignUp,SignIn::class.java)
+            finish()
+            startActivity(intent)
+        }
         binding.btnRegister.setOnClickListener {
             val name = binding.edTxtUsername.text.toString()
             val email = binding.edTxtEmail.text.toString()
@@ -33,9 +36,7 @@ class SignUp : AppCompatActivity() {
             else{
                 signUp(name,email,password)
             }
-
         }
-
     }
 
     private fun signUp(name:String,email: String, password: String) {

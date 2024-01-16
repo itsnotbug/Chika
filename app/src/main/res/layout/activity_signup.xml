@@ -6,70 +6,105 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".SignUp">
-    <EditText
-        android:id="@+id/edTxtUsername"
-        android:layout_width="371dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:ems="10"
-        android:drawableLeft="@drawable/baseline_verified_user_24"
-        android:drawablePadding="10dp"
-        android:hint="@string/username"
-        android:inputType="text"
-        android:paddingStart="10dp" />
 
-    <EditText
-        android:id="@+id/edTxtEmail"
-        android:layout_width="371dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/email"
-        android:drawableLeft="@drawable/baseline_email_24"
-        android:drawablePadding="10dp"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:paddingStart="10dp" />
+    <ImageView
+        android:layout_marginTop="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@drawable/message"
+        android:layout_marginBottom="30dp">
+    </ImageView>
 
-    <EditText
-        android:id="@+id/edTxtPassword"
-        android:layout_width="371dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+    <!--username!-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutUsername"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:drawableLeft="@drawable/baseline_lock_24"
-        android:hint="@string/password"
-        android:drawablePadding="10dp"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:paddingStart="10dp" />
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/username">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edTxtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_verified_user_24"
+
+            android:drawablePadding="12dp"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="97dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--email!-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edTxtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_email_24"
+            android:drawablePadding="12dp"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="97dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Password-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edTxtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:drawablePadding="12dp"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="97dp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnRegister"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sign_up"
+
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:textSize="15sp"
-        style="@style/Widget.MaterialComponents.Button"/>
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/sign_up"
+        android:textSize="15sp" />
     <Button
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sign_in"
         android:layout_marginStart="20dp"
-
         android:layout_marginEnd="20dp"
         android:textSize="15sp"
         style="@style/Widget.MaterialComponents.Button"/>
-
-
-
 </androidx.appcompat.widget.LinearLayoutCompat>
