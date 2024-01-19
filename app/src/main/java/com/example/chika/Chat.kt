@@ -35,7 +35,7 @@ class Chat : AppCompatActivity() {
         receiverRoom = senderUid + receiverUid
 
         messageRecyclerView = binding.chatRecycleView
-        supportActionBar?.title = name
+        binding.materialToolbar.title = name
         messageList = arrayListOf()
         messageAdapter = MessageAdapter(this,messageList)
         messageRecyclerView.layoutManager =LinearLayoutManager(this)
