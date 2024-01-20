@@ -11,7 +11,16 @@ import com.google.firebase.auth.FirebaseAuth
 class SignIn : AppCompatActivity() {
     private lateinit var binding: ActivitySigninBinding
     private lateinit var mAuth:FirebaseAuth
-
+    override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = mAuth.currentUser
+        if (currentUser != null) {
+            val intent = Intent(this@SignIn,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySigninBinding.inflate(layoutInflater)
@@ -34,9 +43,10 @@ class SignIn : AppCompatActivity() {
 
 
         }
-        binding.btnInRegister.setOnClickListener{
+        binding.txtViewSignUp.setOnClickListener{
             val intent = Intent(this@SignIn,SignUp::class.java)
             startActivity(intent)
+            finish()
         }
 
     }

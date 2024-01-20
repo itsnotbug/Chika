@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         mDbRef = FirebaseDatabase.getInstance().reference
 
+        checkCurrentUser()
         mDbRef.child("user").addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 //user list is a must due to onDataChange setup
@@ -56,21 +57,26 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
-    }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.app_bar_nav,menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId ==R.id.logout){
-            mAuth.signOut()
-            val intent = Intent(this@MainActivity,SignIn::class.java)
-            finish()
-            startActivity(intent)
-            return true
+        binding.materialToolbar.setOnMenuItemClickListener{
+            when(it.itemId){
+                R.id.logout->{
+                    mAuth.signOut()
+                    val intent = Intent(this@MainActivity,SignIn::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+            }
+            true
         }
-        return true
+    }
+
+    private fun checkCurrentUser() {
+        val user = mAuth.currentUser
+        if(user==null){
+            val intent = Intent(this@MainActivity,SignIn::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

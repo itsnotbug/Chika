@@ -12,4 +12,7 @@
     <color name="primary_blue_800">#232F34</color>
     <color name="primary_blue_600">#4A6572</color>
     <color name="primary_beige">#FFFBE6</color>
+    <!--experimental color!-->
+    <color name="orange_12">#FED66F</color>
+    <color name="classy_green">#01AB95</color>
 </resources>

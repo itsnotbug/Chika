@@ -11,13 +11,17 @@
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:subtitleTextColor="@color/secondary_orange_500"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/secondary_orange_500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/app_bar_nav"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:title="@string/material_toolbar_default"
         tools:ignore="MissingConstraints" />
 
     <androidx.recyclerview.widget.RecyclerView

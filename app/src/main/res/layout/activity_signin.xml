@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFBE6"
+    android:background="@color/orange_12"
     android:orientation="vertical"
     tools:context=".SignIn">
 
     <com.airbnb.lottie.LottieAnimationView
+        android:backgroundTint="@color/orange_12"
         android:id="@+id/lAChickenIcon"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_gravity="center"
@@ -20,78 +21,120 @@
         app:lottie_repeatMode="reverse"
         tools:ignore="MissingClass"
         android:background="#FFFBE6"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutEmailAddress"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="8dp"
-        android:hint="@string/email">
+        android:layout_height="wrap_content">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edEmail"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/baseline_email_24"
-            android:drawablePadding="12dp"
-            tools:layout_editor_absoluteX="6dp"
-            tools:layout_editor_absoluteY="97dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="700dp"
+            android:orientation="vertical"
+            android:paddingTop="30dp">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="8dp"
-        android:id="@+id/layoutPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:endIconMode="password_toggle"
-        android:hint="@string/password">
+            <TextView
 
-        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtViewSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/sign_in"
+                android:textSize="30sp" />
 
-            android:id="@+id/edPassword"
-            android:drawableStart="@drawable/baseline_lock_24"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawablePadding="12dp"
-            android:hint="@string/password"
-            tools:layout_editor_absoluteX="26dp"
-            tools:layout_editor_absoluteY="205dp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="8dp"
+                android:hint="@string/email">
 
-    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/baseline_email_24"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/poppins"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="97dp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/btnLogin"
-        style="@style/Widget.MaterialComponents.Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:paddingStart="10dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingBottom="10dp"
-        android:text="@string/sign_in"
-        android:textSize="15sp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="8dp"
+                android:hint="@string/password"
+                app:endIconMode="password_toggle">
 
-    <Button
-        android:id="@+id/btnInRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_up"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:paddingStart="10dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingBottom="10dp"
-        android:textSize="15sp"
-        style="@style/Widget.MaterialComponents.Button"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_lock_24"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/password"
+                    tools:layout_editor_absoluteX="26dp"
+                    tools:layout_editor_absoluteY="205dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnLogin"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/sign_in"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp">
+
+                <TextView
+                    android:id="@+id/txtViewDontHave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:text="Don't have an account yet?" />
+
+                <TextView
+                    android:id="@+id/txtViewSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Create one"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/primary_blue_700" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
 
 
 </LinearLayout>

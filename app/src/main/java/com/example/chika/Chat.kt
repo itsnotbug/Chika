@@ -3,6 +3,7 @@ package com.example.chika
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chika.databinding.ActivityChatBinding
@@ -33,6 +34,10 @@ class Chat : AppCompatActivity() {
 
         senderRoom = receiverUid + senderUid
         receiverRoom = senderUid + receiverUid
+
+        val toolbar = binding.materialToolbar
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         messageRecyclerView = binding.chatRecycleView
         binding.materialToolbar.title = name
@@ -69,5 +74,12 @@ class Chat : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == android.R.id.home){
+            finish()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
