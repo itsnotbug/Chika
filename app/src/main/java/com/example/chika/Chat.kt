@@ -3,6 +3,7 @@ package com.example.chika
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -38,9 +39,8 @@ class Chat : AppCompatActivity() {
         val toolbar = binding.materialToolbar
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
+        supportActionBar?.title = "$name";
         messageRecyclerView = binding.chatRecycleView
-        binding.materialToolbar.title = name
         messageList = arrayListOf()
         messageAdapter = MessageAdapter(this,messageList)
         messageRecyclerView.layoutManager =LinearLayoutManager(this)
@@ -55,12 +55,17 @@ class Chat : AppCompatActivity() {
                        val message = postSnapshot.getValue(Message::class.java)
                        messageList.add(message!!)
                    }
+
                     messageAdapter.notifyDataSetChanged()
-                    messageRecyclerView.smoothScrollToPosition(messageAdapter.itemCount-1)
+                    if (messageAdapter.itemCount > 0){
+                        messageRecyclerView.smoothScrollToPosition(messageAdapter.itemCount-1)
+                    }
                 }
                 override fun onCancelled(error: DatabaseError) {
+                    Log.d("database error","${error.details}")
                 }
             })
+
 
         binding.btnSend.setOnClickListener {
             val message = binding.edTxtMessage.text.toString()
@@ -73,9 +78,7 @@ class Chat : AppCompatActivity() {
             binding.edTxtMessage.setText("")
         }
 
-
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId == android.R.id.home){
             finish()

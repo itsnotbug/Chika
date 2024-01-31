@@ -15,16 +15,16 @@ class SignUp : AppCompatActivity() {
     private lateinit var mAuth:FirebaseAuth
     private lateinit var mDbref:DatabaseReference
 
-    override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = mAuth.currentUser
-        if (currentUser != null) {
-            val intent = Intent(this@SignUp,MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-    }
+//    override fun onStart() {
+//        super.onStart()
+//        // Check if user is signed in (non-null) and update UI accordingly.
+//        val currentUser = mAuth.currentUser
+//        if (currentUser != null) {
+//            val intent = Intent(this@SignUp,MainActivity::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
+//    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignupBinding.inflate(layoutInflater)
