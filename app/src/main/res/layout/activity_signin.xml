@@ -4,23 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orange_12"
+    android:background="@color/primary_purple"
     android:orientation="vertical"
     tools:context=".SignIn">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:backgroundTint="@color/orange_12"
-        android:id="@+id/lAChickenIcon"
-        android:layout_marginTop="80dp"
-        android:layout_width="match_parent"
+        android:id="@+id/lAManOneIcon"
+        android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:background="#FFFBE6"
+        android:backgroundTint="@color/primary_purple"
         android:scaleType="fitCenter"
-        app:lottie_rawRes="@raw/chicky"
+        app:lottie_rawRes="@raw/man"
         app:lottie_repeatCount="1000"
         app:lottie_repeatMode="reverse"
-        tools:ignore="MissingClass"
-        android:background="#FFFBE6"/>
+        tools:ignore="MissingClass" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -32,14 +33,13 @@
             android:paddingTop="30dp">
 
             <TextView
-
                 android:id="@+id/txtViewSignIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginEnd="20dp"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="@string/sign_in"
                 android:textSize="30sp" />
 
@@ -72,7 +72,6 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="8dp"
-                android:hint="@string/password"
                 app:endIconMode="password_toggle">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -95,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/poppins_semibold"
                 android:paddingStart="10dp"
                 android:paddingTop="10dp"
                 android:paddingEnd="10dp"
@@ -126,10 +125,10 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginEnd="20dp"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/poppins_semibold"
                     android:text="Create one"
                     android:textAlignment="gravity"
-                    android:textColor="@color/primary_blue_700" />
+                    android:textColor="@color/primary_purple" />
             </LinearLayout>
 
         </LinearLayout>

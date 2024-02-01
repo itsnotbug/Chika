@@ -6,49 +6,50 @@
     android:layout_height="wrap_content">
 
         <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="80dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:background="@color/primary_beige"
+                    android:background="@color/white"
                     android:layout_height="match_parent">
 
                         <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/imgViewProfilePic"
                             style="@style/circular"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:paddingStart="5dp"
                             android:paddingTop="5dp"
                             android:paddingRight="5dp"
                             android:paddingBottom="5dp"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/chickcute"
+                            android:src="@drawable/donut"
                             android:textAlignment="center"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.044"
+                            app:layout_constraintHorizontal_bias="0.046"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:shapeAppearanceOverlay="@style/circular"
-                            app:strokeColor="@color/white"
+                            app:strokeColor="@color/primary_cyan"
                             app:strokeWidth="3dp" />
 
                         <TextView
                             android:id="@+id/txtUserName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
                             android:paddingLeft="10dp"
                             android:text="@string/username"
-                            android:textAllCaps="true"
-                            android:textColor="@color/primary_blue_700"
-                            android:textSize="18sp"
+                            android:textColor="@color/primary_purple"
+                            android:textSize="20sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.066"
+                            app:layout_constraintHorizontal_bias="0.056"
                             app:layout_constraintStart_toEndOf="@+id/imgViewProfilePic"
                             app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>

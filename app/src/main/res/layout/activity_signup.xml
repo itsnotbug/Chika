@@ -5,18 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".SignUp">
 
-    <ImageView
-        android:layout_marginTop="100dp"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lAManTwoIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
         android:layout_gravity="center"
-        android:src="@drawable/message"
-        android:layout_marginBottom="30dp">
-    </ImageView>
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/primary_purple"
+        android:scaleType="fitCenter"
+        app:lottie_rawRes="@raw/man2"
+        app:lottie_repeatCount="1000"
+        app:lottie_repeatMode="reverse"
+        tools:ignore="MissingClass" />
 
     <!--username!-->
+    <TextView
+        android:id="@+id/txtViewCreateAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Create your account"
+        android:textSize="20sp" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutUsername"
         android:layout_width="match_parent"
@@ -31,9 +50,9 @@
             android:id="@+id/edTxtUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/baseline_verified_user_24"
-
+            android:drawableLeft="@drawable/baseline_person_24"
             android:drawablePadding="12dp"
+            android:fontFamily="@font/poppins"
             tools:layout_editor_absoluteX="6dp"
             tools:layout_editor_absoluteY="97dp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -55,6 +74,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/baseline_email_24"
             android:drawablePadding="12dp"
+            android:fontFamily="@font/poppins"
             tools:layout_editor_absoluteX="6dp"
             tools:layout_editor_absoluteY="97dp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -76,6 +96,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/baseline_lock_24"
             android:drawablePadding="12dp"
+            android:fontFamily="@font/poppins"
             tools:layout_editor_absoluteX="6dp"
             tools:layout_editor_absoluteY="97dp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -88,23 +109,26 @@
 
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:fontFamily="@font/poppins"
         android:paddingStart="10dp"
         android:paddingTop="10dp"
         android:paddingEnd="10dp"
         android:paddingBottom="10dp"
         android:text="@string/sign_up"
         android:textSize="15sp" />
+
     <Button
+        android:id="@+id/btnLogin"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/poppins"
         android:paddingStart="10dp"
         android:paddingTop="10dp"
         android:paddingEnd="10dp"
         android:paddingBottom="10dp"
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text="@string/sign_in"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:textSize="15sp"
-        style="@style/Widget.MaterialComponents.Button"/>
+        android:textSize="15sp" />
 </androidx.appcompat.widget.LinearLayoutCompat>

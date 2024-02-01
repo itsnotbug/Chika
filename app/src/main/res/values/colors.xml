@@ -6,13 +6,9 @@
     <color name="m_green">#37D05F</color>
     <color name="m_blue">#2D9AFC</color>
     <color name="m_beige">#f6eee3</color>
-    <!--Theme colors!-->
-    <color name="secondary_orange_500">#F9AA33</color>
-    <color name="primary_blue_700">#344955</color>
-    <color name="primary_blue_800">#232F34</color>
-    <color name="primary_blue_600">#4A6572</color>
-    <color name="primary_beige">#FFFBE6</color>
-    <!--experimental color!-->
-    <color name="orange_12">#FED66F</color>
-    <color name="classy_green">#01AB95</color>
+    <!--colors for theme-!-->
+    <color name="primary_purple">#9C6CFE</color>
+    <color name="primary_dark_blue">#352CAB</color>
+    <color name="primary_cyan">#06D2DD</color>
+
 </resources>
