@@ -11,4 +11,7 @@
     <color name="primary_dark_blue">#352CAB</color>
     <color name="primary_cyan">#06D2DD</color>
 
+    <!-- Added color for main toolbar!-->
+    <color name="lighter_blue">#4c4cff</color>
+
 </resources>

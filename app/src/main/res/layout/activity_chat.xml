@@ -13,7 +13,7 @@
         android:fontFamily="@font/poppins"
         app:titleTextColor="@color/white"
         android:layout_height="wrap_content"
-        android:background="@color/primary_purple"
+        android:background="@color/lighter_blue"
         android:minHeight="?attr/actionBarSize"
         android:textAlignment="gravity"
         android:theme="?attr/actionBarTheme"

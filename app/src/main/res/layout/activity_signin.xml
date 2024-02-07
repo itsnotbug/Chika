@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_purple"
+    android:background="@color/lighter_blue"
     android:orientation="vertical"
     tools:context=".SignIn">
 
@@ -15,7 +15,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="80dp"
         android:background="#FFFBE6"
-        android:backgroundTint="@color/primary_purple"
+        android:backgroundTint="@color/lighter_blue"
         android:scaleType="fitCenter"
         app:lottie_rawRes="@raw/man"
         app:lottie_repeatCount="1000"

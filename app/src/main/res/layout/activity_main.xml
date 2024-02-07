@@ -12,7 +12,7 @@
         android:fontFamily="@font/poppins"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/primary_purple"
+        android:background="@color/lighter_blue"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:titleTextColor="@color/white"
