@@ -14,7 +14,6 @@
         android:layout_height="200dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@color/primary_purple"
         android:scaleType="fitCenter"
         app:lottie_rawRes="@raw/man2"
         app:lottie_repeatCount="1000"
@@ -70,6 +69,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edTxtEmail"
+            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/baseline_email_24"
