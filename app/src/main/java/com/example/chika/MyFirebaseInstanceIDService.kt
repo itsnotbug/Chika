@@ -27,7 +27,7 @@ class MyFirebaseInstanceIDService: FirebaseMessagingService() {
         val intent = Intent(this,MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         val pendingIntent = PendingIntent.getActivity(this,0,intent,
-            PendingIntent.FLAG_ONE_SHOT or PendingIntent.FLAG_MUTABLE)
+            PendingIntent.FLAG_ONE_SHOT or PendingIntent.FLAG_IMMUTABLE)
 
     //channel id,channel name
         val soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
@@ -45,7 +45,7 @@ class MyFirebaseInstanceIDService: FirebaseMessagingService() {
             val notificationChannel = NotificationChannel(channelId, channelName,NotificationManager.IMPORTANCE_HIGH)
             notificationManager.createNotificationChannel(notificationChannel)
         }
-        notificationManager.notify(0,builder.build())
+        notificationManager.notify(123,builder.build())
     }
     //custom layout notification
     private fun getRemoteView(title: String, message: String): RemoteViews? {

@@ -73,6 +73,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+
     private fun checkCurrentUser() {
         val user = mAuth.currentUser
         if(user==null){
